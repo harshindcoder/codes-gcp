@@ -279,5 +279,25 @@ Now follow these steps to create a dataset in BigQuery:
 
 You can see your dataset under the project name in **Explorer** panel.
 
+### CSV file into BigQuery Table
+Simplest way to load data in Bigquery is to use BigQuery console.
 
+To do that click on action button(three dots vertically) next to your created dataset. Be careful do not select action button next to your project name.
 
+You can find **CREATE TABLE** button in top right corner of the screen. Create table by completing the form as per the following details:
+
+Create table from : Upload
+Select file: Find any CSV file that you have. (Note keep it very small otherwise it can go beyond free tier. If possible keep in KBs.)
+
+Table name : Any name
+
+Schema : Click **Auto detect** checkbox.
+
+After completing steps, you can see your table under the dataset. They you can see table using **SELECT** statement or choose **PREVIEW** after clicking table name in **Explorer**.
+
+Write Some SQl queries on the table you created and try to check if it is working.
+
+Now delete this table and dataset after completing the above activities to stop wasting space for now.
+
+#### Data types in BigQuery
+Check out datatypes used in BigQuery [here](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types).
