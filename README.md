@@ -109,8 +109,112 @@ Both can be same since above will most probably be same unless two of you who us
 A. Search for you created project.
 B. Click your project name from the list.
 
-this way you will work on your own project, not the default **My First Project**
+this way you will work on your own project, not the default **My First Project**.
 
+## GCP Cloud Shell
+
+You can access Linux terminal in the GCP console. This is a standard Linux environment preinstalled with all necessary libraries.
+
+Lets use it:
+1. Open the terminal by clicking on top right button in the  GCP console. You can check it by hovering your coursor over buttons in right.
+
+2. Wait for a few second to let it start.
+
+3. Still in the terminal, if you check the bar, you will see the **Open Editor** Button. Click on it.
+
+4. terminal will change into text editor. Editor is not proper IDE but it will be usefull in minor corrections in code.
+
+Lets warmup by creating Hello GCP python script:
+1. Go to File | New File and then name the file **hello_gcp.py**.
+
+2. In editor write the following command.
+```
+print("Hello GCP, I am using you for a first time.")
+```
+The editor will automatically save your file.
+3.Lets run python script from terminal by clicking **Open Terminal** button and run the following Python command:
+```
+#python hello_gcp.py
+```
+The terminal will print your text out.
+
+So until now we setup our project. Try to run our first script in our project. 
+
+## GCP servies for data engineers
+
+We seen that GCP Console navigation bar contained lots of services in GCP. The services you will generally use in company are predecided during creating the data architecture on GCP. Data engineers are also involved in this process.
+
+There are five groups of services in GCP:
+1. VM-based : You have machine with OS online to setup everything yourself.
+2. Managed Services : Google Manage software for you. OS + software (E.g. Hadoop on GCP is to use Dataproc).
+3. Serverless (fully managed services) : Just Start using no need to consider anythin about machine type etc. (E.g. Bigquery).
+
+I want to divide GCP products into three categories:
+1. Big Data 
+
+List of services under big data:
+1. Bigquery
+2. Dataproc
+3. Dataflow
+4. Pub/Sub
+
+We will use them but please try to know more about these products on youtube or google.
+
+2. Storage and DB:
+
+List of services:
+
+1. Cloud Storage
+2. Bigtable
+3. Dataflow
+4. Pub/Sub
+
+These are for storage and data tranfer.
+
+3. ETL Orchestrator
+
+List of services:
+
+ 1. Cloud composer
+ 2. Data Fusion
+ 3. Dataprep
+
+These are for automation and orchestration.
+
+4. Identity and management tools
+
+List of services:
+
+1. IAM & Admin
+2. Logging
+3. Monnitoring 
+4. Data Catalog
+
+for supervision.
+
+5. MI and BL
+List of services:
+
+1. Vertex AI
+2. Looker
+3. Data Studio
+
+Other than about services we need to know about types of accounts on GCP.
+
+We need to know there are two type of accounts on GCP.
+
+User Account : Is our personal account as human users.
+Service Account : Which is used by non-human.
+
+For Example : Company want to run some pipelines without employees involvment for very sensitive data then they will use service account.
+
+## Knowledge Check:
+1. What is GCP console?
+2. How to create a new project?
+3. How to work in new project?
+4. How to work with Cloud console and Cloud Editor?
+5. Different Cloud services use by data engineers and there types.
+6. Types of account on GCP.
 
 
 
