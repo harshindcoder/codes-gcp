@@ -266,3 +266,18 @@ Then click on the **RUN** button.
 
 5. The result of the query will ve shown at the bottom as tables and there will also be some other things like Job History etc. Explore them on your own.
 
+### Creating dataset in BigQuery
+
+Dataset meaning creating data tables in BigQuery. We should always try to think from the business perspective when creating datasets in the bigquery. Always try to give you datasets a meaninful name rather thane table1, table2 etc.
+
+Now follow these steps to create a dataset in BigQuery:
+1. In Explorer you can see three dots in right of your project name. Click on it. It is also called action button.
+2. Click on create dataset button.
+3. Choose a name for the dataset. Any name will do.
+4. Choose the data location. Choose any for now.
+5. Set everything else as default for now and click **CREATE DATASET**.
+
+You can see your dataset under the project name in **Explorer** panel.
+
+
+
