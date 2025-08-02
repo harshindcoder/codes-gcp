@@ -247,5 +247,22 @@ BigQuery is fully managed data warehouse in the cloud. It allow us to store and 
 
 BigQuery allows you to insert streaming data. BigQuery allows you to perform machine learning using BigQuery SQL directly in the console at scale. This is very useful for organizations that require quick access to machine learning capabilities.
 
+## BigQuery Console
 
+We will learn BigQuery by doing so follow me:
+1. Open GCP console and choose **BigQuery** from navigation bar. Then we will come to BigQuery main page also called BigQuery Console.
+
+2. Familiarize with names of the buttons and panels. Then go to the Explorer panel in left.
+
+3. We can see our project name under **Explorer** as a default.
+In the center panel is query element. we will write query in here and run it either using the **RUN** button or using keyboard shortcuts.
+
+4. Try our hell_bigquery by typing in the editor of **Untitled query** in the center panel.
+Type
+```
+SELECT "Hello BigQuery";
+```
+Then click on the **RUN** button.
+
+5. The result of the query will ve shown at the bottom as tables and there will also be some other things like Job History etc. Explore them on your own.
 
