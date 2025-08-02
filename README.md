@@ -301,3 +301,62 @@ Now delete this table and dataset after completing the above activities to stop 
 
 #### Data types in BigQuery
 Check out datatypes used in BigQuery [here](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types).
+
+Now lets talk about timestamp data in BigQuery. BigQuery only support UTC format to make the timestamp consist all around the world.
+
+So upto know we created dataset in BigQuery then added table to dataset. We added CSV file to our table and also learned about data formats and restrictions in BigQuery.
+
+## Preparing before developing our data warehouse
+
+Step 1 : Access your Cloud Shell
+
+Step 2 : Check the curret setup using the command line
+
+type in Cloud Shell
+```
+#gcloud info
+```
+click **authorize** if prompted.
+
+We want to check the account and project. Make sure it's you email and the project you created.
+
+Account : [your email]
+Project : [your project]
+
+Step 3 : After checking the environment we want to configure a new environment using the gcloud init command. In cloud shell run the following command:
+```
+gcloud init
+```
+
+Choose option:
+```
+[2] Create a new configuration
+```
+
+then give this configuration a name, for example, **personal-config**. Choose the option to use your existing email.
+```
+[1] your email
+```
+
+Lastly choose you project number:
+```
+[number] project name.
+```
+The last option to configuring the default region and zone. Just choose n(no). This option may not require based on when you are using shell to run the commands.
+
+Step 4 : The final prerequisite is to download the example code and dataset from this repository. We will use codes and data from this repository only.
+
+Step 5 : Upload data to GCS from Git. There are three steps:
+1. Create a GCS bucket.
+2. Enter the bucket information.
+3. Upload a local file to the GCS bucket using ```gsutil```.
+
+1. Create a GCS Bucket
+Go to **Navigation** menu and choose Cloud Storage. Click the **CREATE BUCKET** button.
+
+Fill in the bucket name [your own project name]-data-bucket.
+
+Bucket name should be unique globally. So using our project name as prefix is way to ensure uniqueness.
+
+Choose **Default** for location.
+
