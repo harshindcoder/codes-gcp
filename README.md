@@ -4,7 +4,7 @@ This repository is for step by step practise of Google Cloud Platform. There are
 
 Topics covered in this repository are:
 1. Fundamental of Data engineering : [Link](#1-fundamentals-of-data-engineering)
-2. Some intro to big data capabilities of GCP : 
+2. Some intro to big data capabilities of GCP : [Link](#2-big-data-capabilities-of-gcp)
 3. Data warehouse in BigQuery
 4. Orchestration for Batch Data loading Using Cloud Composer
 5. Data Lake using Dataproc
@@ -215,6 +215,32 @@ For Example : Company want to run some pipelines without employees involvment fo
 4. How to work with Cloud console and Cloud Editor?
 5. Different Cloud services use by data engineers and there types.
 6. Types of account on GCP.
+
+# Data Warehouse in BigQuery
+Data Warehouse is usually single source of truth where as discussed before various data silos combine.
+
+In this section we will be using BigQuery, Google Cloud Storage (GCS) and Cloud SQL.
+
+Try to open BigQuery and GCS services on your console in your project and enable the APIs. There will be automatic notification for enabling APIs if you have never enabled them.
+
+Try to remember what is Google Console, Cloud Shell and Cloud Editor and use them just to become familiar with them.
+
+Before going forward you should have basic knowledge of Python, SLQ, Linux commands, and Git.
+
+### Assignment if you do not know above things.
+1. Python - I will add later
+2. SQL - I will add later
+3. Git - I will add later
+4. Linux Commands -  I will add later
+
+>Use python3 in cloud shell when running later codes not python.
+
+## Intro to Google Cloud Storage and BigQuery
+
+GCS is object storage. It's a fully managed service by GCP.
+
+Object 
+
 
 
 
