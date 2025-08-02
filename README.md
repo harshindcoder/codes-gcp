@@ -239,15 +239,13 @@ Before going forward you should have basic knowledge of Python, SLQ, Linux comma
 
 GCS is object storage. It's a fully managed service by GCP.
 
-Object 
+Object Storage is a highly scalable data storage architecture that can store very large amounts of data in any format.
 
+We will be using GCS as dump storage from databases, for exporting historical data from BigQuery, for storing machine learning model files, and for any other purposes related to storing files.
 
+BigQuery is fully managed data warehouse in the cloud. It allow us to store and anlayze data immediately without thinking about infrastructure.
 
-
-
-
-
-
+BigQuery allows you to insert streaming data. BigQuery allows you to perform machine learning using BigQuery SQL directly in the console at scale. This is very useful for organizations that require quick access to machine learning capabilities.
 
 
 
