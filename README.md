@@ -499,3 +499,28 @@ gcloud sql instances delete mysql-instance-source
 ```
 Check CloudSQL home page to ensure that the instance is deleted.
 
+So now we have seen what to do to load code on cloud shell we will copy paste the files from our code folder in repository save with same name and run the codes on cloud shell. I will now not repeat this process again and again. Just do the same process from now on.
+
+### Load GCS to Bigquery
+
+We will use BigQuery console for this process.
+
+Create a new dataset named raw_bikesharing.
+Just use the default dataset location.
+
+In the raw_bikesharing dataset, create a new table from the BigQuery console:
+1. Click on create table icon
+2. In Create table from option choose Google Cloud Storage:
+Browse Select file from GCS bucket:
+[your bucket name]/mysql_export/stations/20180101/stations.csv
+3. For Table name, select stations.
+4. In the Schema option, choose Edit as text
+5. Write following in the schema textbox:
+```
+station_id:STRING,name:STRING,region_id:STRING,capacity:INTEGER
+```
+6. Create table
+
+STEP 4: Create a BigQuery data mart
+
+
