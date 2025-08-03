@@ -479,3 +479,11 @@ After finishing process. Your CloudSQL service account will have permission to w
 
 Next we want to load the data.
 
+We will load data by using the shell script from our git repository code section.
+
+The file name is  gcloud_export_cloudsql_to_gcs.sh.
+
+Change the bucket name to yours and read it carefully using gcloud editor which we learned in start. Before that load this file on our bucket by creating a code folder on bucket and adding the file to that.
+
+
+
