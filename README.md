@@ -364,3 +364,95 @@ Choose **Default** for location.
 3. Upload data folder in our repository on bucket.
 
 ## Practising developing a data warehouse
+
+We will discuss different scenarios.
+
+Scenario 1:
+We have data in CloudSQL-MySQL database we want to do some queries on it and download the result as CSV files.
+
+Steps and planning for scenario 1:
+Planning : 
+1. Create MySQL Database 
+2. Extract MySQL to GCS 
+3. Load GCS to BigQuery
+4. Create BigQuery Data Mart
+
+Step 1 : Create a MySQL database in CloudSQL
+
+This step is not part of building data warehouse. But to simulate table extraction from application databases to GCS, this will be very helpful.
+
+1. Create a CloudSQL instance
+2. Connect to the MySQL instance
+3. Create a MySQL database
+4. Create a table in the MySQL database
+5. Import CSV data into the MySQL database
+
+###Create a CloudSQL instance
+You can do it by using Navigation section but for simplicity we will run it using the gcloud command in Cloud Shell.
+Run this command in cloud shell:
+```
+gcloud sql instances create mysql-instance-source \
+--database-version=MYSQL_5_7 \
+--tier=db-g1-small \
+--region=us-central1 \
+--root-password=codesgcp123 \
+--availability-type=zonal \
+--storage-size=10GB \
+--storage-type=HDD
+```
+>Warning : It is going to cost us. Do not forget to delete the instance after this practice exerice. It cost hourly so do not leave it running.
+
+Wait for around 5 minutes it take some time. Refresh after the process is complete and go to Cloud SQL homepage and you will see that your MySQL instance is ready.
+
+### Connect to the MySQL instance
+Run this command in cloud shell
+```
+gcloud sql connect mysql-instance-source --user=root
+```
+Password is as given is above command before. Now you will see MySQL shell.
+
+### Create a MySQL database
+Lets create MySQL database named ```apps_db```.
+
+Run this script in MySQL shell:
+```
+CREATE DATABASE apps_db;
+```
+Check database is created using this command:
+```
+SHOW DATABASES;
+```
+
+### Creating a table in the MySQL database
+While in mysql shell, we need to create the table using a Data Definition Language (DDL) statement.
+
+Create table by running following DDL:
+```
+CREATE TABLE apps_db.stations(
+    station_id varchar(255),
+    name varchar(255),
+    region_id varchar(10),
+    capacity integer
+);
+```
+this will create a table station in apps_db database.
+
+### Import CSV data into the MySQL database
+Do not close the cloud shell.
+
+To upload the data, go to the Cloud SQL console:
+1. Click the created mysql-instance source, and then find and click the **Import** button.
+2. Choose the name of data file in our GCS bucket-name/file-name:
+gs://[your project name]-data-bucket/data/dataset/stations/stations.csv
+3. Change the File format option to CSV.
+4. Input the destination database,apps_db, and the table name, stations.
+5. Once everything is complete, click the **Import** button.
+6. Now we will return to Cloud Shell and try to access the stations table. In the MySQL shell, run the following query:
+```
+SELECT * FROM apps_db.stations LIMIT 10;
+```
+Make sure you saw some data.
+Exit from MySQL shell by typing 
+```
+exit
+``` 
