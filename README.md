@@ -456,3 +456,26 @@ Exit from MySQL shell by typing
 ```
 exit
 ``` 
+
+### Extract data from MySQL to GCS
+First of all, we need to handle Identity and Access Management (IAM). We need to assign the CloudSQL service account a Storage Object admin role first. This step will be a little bit confusing if you are new to IAM, but it's good starting point for understanding IAM without going into too much depth.
+
+Find service account for your mysql-instance-source by clicking on it in CloudSQL console and scrolling down.
+
+It will be in this format:
+[any text] @gcp-sa-cloud.sql.iam.gserviceaccount.com.
+
+Copy the service account as we want to add IAM role to it.
+
+Follow these steps:
+1. go to navigation bar
+2. Choose IAM & Admin -> IAM
+3. Click +Add
+4. Paste the CloudSQL service account into New principals.
+5. then select a role
+Type gcs object and you will be able to  choose Storage Object Admin (not Storage Admin).
+
+After finishing process. Your CloudSQL service account will have permission to write and delete file objects in all GCS buckets in you project.
+
+Next we want to load the data.
+
