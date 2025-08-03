@@ -349,14 +349,18 @@ Step 4 : The final prerequisite is to download the example code and dataset from
 Step 5 : Upload data to GCS from Git. There are three steps:
 1. Create a GCS bucket.
 2. Enter the bucket information.
-3. Upload a local file to the GCS bucket using ```gsutil```.
+3. Upload a local file to the GCS bucket using **Upload** option.
 
 1. Create a GCS Bucket
 Go to **Navigation** menu and choose Cloud Storage. Click the **CREATE BUCKET** button.
 
+2. Enter the bucket information.
 Fill in the bucket name [your own project name]-data-bucket.
 
 Bucket name should be unique globally. So using our project name as prefix is way to ensure uniqueness.
 
 Choose **Default** for location.
 
+3. Upload data folder in our repository on bucket.
+
+## Practising developing a data warehouse
