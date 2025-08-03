@@ -483,7 +483,19 @@ We will load data by using the shell script from our git repository code section
 
 The file name is  gcloud_export_cloudsql_to_gcs.sh.
 
-Change the bucket name to yours and read it carefully using gcloud editor which we learned in start. Before that load this file on our bucket by creating a code folder on bucket and adding the file to that.
+Change the bucket name to yours and read it carefully using gcloud editor which we learned in start. Before that load this file on our cloud editor by copy paste in cloud editor and save with the same name as ours. If you type ls and enter in terminal  after this you will see that file is saved.
+After changing bucket name come to cloud shell and run the script by running this command:
+```
+sh gcloud_export_cloudsql_to_gcs.sh
+```
+This script will export data to GCS from mysql instance. In real world scenario we extract data from on of the clone instance. Application databases usually have a clone instance for providing high availability. Hence it is good to extract data from there. 
 
+So, finally we have done E in ETL process, which is to Extract data from a data source into a GCS bucket.
 
+We have done what we want to do with MySQL instance so we can delete it now.
+You can delete the MySQL instance by running the following command:
+```
+gcloud sql instances delete mysql-instance-source
+```
+Check CloudSQL home page to ensure that the instance is deleted.
 
